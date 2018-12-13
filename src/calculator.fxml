@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<TabPane prefWidth="420.0" side="LEFT" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.wuqinxuan.view.FxCalcMainController">
+   <tabs>
+      <Tab id="normalCalculator" text="Normal Calculator">
+         <content>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@skin.css">
+               <children>
+                  <Button fx:id="BUTTON7" layoutX="119.0" layoutY="230.0" mnemonicParsing="false" onAction="#BUTTON7_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="7" />
+                  <Button fx:id="BUTTON8" layoutX="171.0" layoutY="230.0" mnemonicParsing="false" onAction="#BUTTON8_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="8" />
+                  <Button fx:id="BUTTON9" layoutX="223.0" layoutY="230.0" mnemonicParsing="false" onAction="#BUTTON9_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="9" />
+                  <Button fx:id="BUTTON4" layoutX="119.0" layoutY="282.0" mnemonicParsing="false" onAction="#BUTTON4_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="4" />
+                  <Button fx:id="BUTTON5" layoutX="171.0" layoutY="282.0" mnemonicParsing="false" onAction="#BUTTON5_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="5" />
+                  <Button fx:id="BUTTON6" layoutX="223.0" layoutY="282.0" mnemonicParsing="false" onAction="#BUTTON6_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="6" />
+                  <Button fx:id="BUTTON1" layoutX="119.0" layoutY="334.0" mnemonicParsing="false" onAction="#BUTTON1_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="1" />
+                  <Button fx:id="BUTTON2" layoutX="171.0" layoutY="334.0" mnemonicParsing="false" onAction="#BUTTON2_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="2" />
+                  <Button fx:id="BUTTON3" layoutX="223.0" layoutY="334.0" mnemonicParsing="false" onAction="#BUTTON3_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="3" />
+                  <Button fx:id="BUTTON0" layoutX="119.0" layoutY="386.0" mnemonicParsing="false" onAction="#BUTTON0_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="0" />
+                  <Button fx:id="BUTTON_LEFT_PAREN" layoutX="275.0" layoutY="194.0" mnemonicParsing="false" onAction="#BUTTON_LEFT_PAREN_ONCLICK" prefHeight="32.0" prefWidth="48.0" styleClass="number" text="(" />
+                  <Button fx:id="BUTTON_DIVIDE" layoutX="276.0" layoutY="230.0" mnemonicParsing="false" onAction="#BUTTON_DIVIDE_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="÷" />
+                  <Button fx:id="BUTTON_MULTIPLY" layoutX="275.0" layoutY="282.0" mnemonicParsing="false" onAction="#BUTTON_MULTIPLY_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="×" />
+                  <Button fx:id="BUTTON_MINUS" layoutX="275.0" layoutY="334.0" mnemonicParsing="false" onAction="#BUTTON_MINUS_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="-" />
+                  <Button fx:id="BUTTON_ADD" layoutX="275.0" layoutY="386.0" mnemonicParsing="false" onAction="#BUTTON_ADD_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="+" />
+                  <Button fx:id="BUTTON_EQUAL" layoutX="15.0" layoutY="438.0" mnemonicParsing="false" onAction="#BUTTON_EQUAL_ONCLICK" prefHeight="64.0" prefWidth="360.0" styleClass="operator" text="=" />
+                  <Button fx:id="BUTTON_CLEAR" layoutX="327.0" layoutY="334.0" mnemonicParsing="false" onAction="#BUTTON_CLEAR_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="C" />
+                  <Button fx:id="BUTTON_BACK" layoutX="327.0" layoutY="386.0" mnemonicParsing="false" onAction="#BUTTON_BACK_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="←" />
+                  <Button fx:id="BUTTON_POINT" layoutX="171.0" layoutY="386.0" mnemonicParsing="false" onAction="#BUTTON_POINT_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="." />
+                  <Button fx:id="BUTTON_RIGHT_PAREN" layoutX="327.0" layoutY="194.0" mnemonicParsing="false" onAction="#BUTTON_RIGHT_PAREN_ONCLICK" prefHeight="32.0" prefWidth="48.0" styleClass="operator" text=")" />
+                  <Button fx:id="BUTTON_CLEAR_ALL" layoutX="327.0" layoutY="282.0" mnemonicParsing="false" onAction="#BUTTON_CLEAR_ALL_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="CA" />
+                  <Button fx:id="BUTTON_NEGATIVE" layoutX="327.0" layoutY="230.0" mnemonicParsing="false" onAction="#BUTTON_NEGATIVE_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="(-)" />
+                  <Button fx:id="BUTTON_FACTORIAL" layoutX="67.0" layoutY="282.0" mnemonicParsing="false" onAction="#BUTTON_FACTORIAL_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="!" />
+                  <Button fx:id="BUTTON_POWER" layoutX="15.0" layoutY="282.0" mnemonicParsing="false" onAction="#BUTTON_POWER_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="^" />
+                  <Button fx:id="BUTTON_EE" layoutX="223.0" layoutY="386.0" mnemonicParsing="false" onAction="#BUTTON_EE_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="operator" text="EE" />
+                  <Button fx:id="BUTTON_TAN" layoutX="119.0" layoutY="194.0" mnemonicParsing="false" onAction="#BUTTON_TAN_ONCLICK" prefHeight="32.0" prefWidth="48.0" styleClass="number" text="tan" />
+                  <Button fx:id="BUTTON_COS" layoutX="67.0" layoutY="194.0" mnemonicParsing="false" onAction="#BUTTON_COS_ONCLICK" prefHeight="32.0" prefWidth="48.0" styleClass="number" text="cos" />
+                  <Button fx:id="BUTTON_SIN" layoutX="15.0" layoutY="194.0" mnemonicParsing="false" onAction="#BUTTON_SIN_ONCLICK" prefHeight="32.0" prefWidth="48.0" styleClass="number" text="sin" />
+                  <Button fx:id="BUTTON_LOG" layoutX="171.0" layoutY="194.0" mnemonicParsing="false" onAction="#BUTTON_LOG_ONCLICK" prefHeight="32.0" prefWidth="48.0" styleClass="number" text="log" />
+                  <Button fx:id="BUTTON_LN" layoutX="223.0" layoutY="194.0" mnemonicParsing="false" onAction="#BUTTON_LN_ONCLICK" prefHeight="32.0" prefWidth="48.0" styleClass="number" text="ln" />
+                  <Button fx:id="BUTTON_PI" layoutX="15.0" layoutY="230.0" mnemonicParsing="false" onAction="#BUTTON_PI_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="π" />
+                  <Button fx:id="BUTTON_E" layoutX="67.0" layoutY="230.0" mnemonicParsing="false" onAction="#BUTTON_E_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="e" />
+                  <Button fx:id="BUTTON_EXPONENT" layoutX="15.0" layoutY="386.0" mnemonicParsing="false" onAction="#BUTTON_EXPONENT_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="指数" />
+                  <Button fx:id="BUTTON_RECIPROCAL" layoutX="67.0" layoutY="386.0" mnemonicParsing="false" onAction="#BUTTON_RECIPROCAL_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="倒数" />
+                  <Button fx:id="BUTTON_SQUARE" layoutX="15.0" layoutY="334.0" mnemonicParsing="false" onAction="#BUTTON_SQUARE_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="平方" />
+                  <Button fx:id="BUTTON_SQRT" layoutX="67.0" layoutY="334.0" mnemonicParsing="false" onAction="#BUTTON_SQRT_ONCLICK" prefHeight="48.0" prefWidth="48.0" styleClass="number" text="开方" />
+                  <Pane fx:id="screenPane" layoutX="15.0" layoutY="27.0" prefHeight="162.0" prefWidth="360.0">
+                     <children>
+                        <Label fx:id="LABEL1" layoutX="1.0" layoutY="1.0" onMouseClicked="#LABEL1_ONCLICK" prefHeight="32.0" prefWidth="358.0" textAlignment="RIGHT">
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="LABEL2" alignment="CENTER_RIGHT" layoutX="1.0" layoutY="33.0" onMouseClicked="#LABEL2_ONCLICK" prefHeight="32.0" prefWidth="358.0" textAlignment="RIGHT">
+                           <padding>
+                              <Insets right="7.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="LABEL3" layoutX="1.0" layoutY="65.0" onMouseClicked="#LABEL3_ONCLICK" prefHeight="32.0" prefWidth="358.0" textAlignment="RIGHT">
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="LABEL4" alignment="CENTER_RIGHT" layoutX="1.0" layoutY="97.0" onMouseClicked="#LABEL4_ONCLICK" prefHeight="32.0" prefWidth="358.0" textAlignment="RIGHT">
+                           <padding>
+                              <Insets right="7.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="LABEL5" layoutX="1.0" layoutY="129.0" prefHeight="32.0" prefWidth="358.0" textAlignment="RIGHT" textOverrun="LEADING_WORD_ELLIPSIS">
+                           <padding>
+                              <Insets left="7.0" />
+                           </padding>
+                        </Label>
+                        <Line endX="358.0" fill="#cccccc" layoutY="65.0" startX="2.0" stroke="#cccccc" strokeType="OUTSIDE" />
+                        <Line endX="358.0" fill="BLACK" layoutY="129.0" startX="2.0" strokeType="OUTSIDE" />
+                        <Rectangle fx:id="rect4" fill="#aaccff" height="31.0" layoutX="1.0" layoutY="97.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+                        <Rectangle fx:id="rect3" fill="#aaccff" height="31.0" layoutX="1.0" layoutY="66.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+                        <Rectangle fx:id="rect2" fill="#aaccff" height="32.0" layoutX="1.0" layoutY="32.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+                        <Rectangle fx:id="rect1" fill="#aaccff" height="32.0" layoutX="1.0" layoutY="1.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="iconify" alignment="CENTER" graphicTextGap="0.0" layoutX="345.0" layoutY="10.0" maxHeight="20.0" maxWidth="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="12.0" prefWidth="12.0" />
+                  <Button fx:id="close" alignment="CENTER" graphicTextGap="0.0" layoutX="363.0" layoutY="10.0" maxHeight="20.0" maxWidth="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="12.0" prefWidth="12.0" />
+                  <Text layoutX="15.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculator" wrappingWidth="80.0" />
+               </children>
+            </Pane>
+         </content>
+      </Tab>
+      <Tab text="Numerical Calculator">
+         <content>
+            <GridPane>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numerical Calculator" wrappingWidth="146.0">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Button fx:id="close1" alignment="CENTER" graphicTextGap="0.0" maxHeight="20.0" maxWidth="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="12.0" prefWidth="12.0" GridPane.halignment="RIGHT">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="iconify1" alignment="CENTER" graphicTextGap="0.0" maxHeight="20.0" maxWidth="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="12.0" prefWidth="12.0" GridPane.halignment="RIGHT">
+                     <GridPane.margin>
+                        <Insets right="25.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <FlowPane GridPane.rowIndex="2">
+                     <children>
+                        <MenuButton mnemonicParsing="false" text="数值积分和微分">
+                           <items>
+                              <MenuItem fx:id="Integression" mnemonicParsing="false" onAction="#MenuItem_Integression_ONCLICK" text="梯形算法和辛普森公式" />
+                              <MenuItem fx:id="SolveDiffEq" mnemonicParsing="false" onAction="#MenuItem_SolveDiffEq_ONCLICK" text="欧拉算法，龙贝格算法" />
+                           </items>
+                        </MenuButton>
+                        <MenuButton mnemonicParsing="false" text="矩阵">
+                           <items>
+                              <MenuItem fx:id="Transformation" mnemonicParsing="false" onAction="#MenuItem_Transformation_ONCLICK" text="图形转换矩阵" />
+                              <MenuItem fx:id="LU" mnemonicParsing="false" onAction="#MenuItem_LU_ONCLICK" text="LU分解测试线性系统方程" />
+                           </items>
+                        </MenuButton>
+                        <MenuButton mnemonicParsing="false" text="计算的乐趣">
+                           <items>
+                              <MenuItem fx:id="FPformats" mnemonicParsing="false" onAction="#MenuItem_FPformats_ONCLICK" text="float与double的交互" />
+                              <MenuItem fx:id="PI" mnemonicParsing="false" onAction="#MenuItem_PI_ONCLICK" text="pi的计算" />
+                              <Menu mnemonicParsing="false" text="随机数">
+                                 <items>
+                                    <MenuItem fx:id="GenerateRadomNormal" mnemonicParsing="false" onAction="#MenuItem_GenerateRadomNormal_ONCLICK" text="均匀分布的随机数" />
+                                    <MenuItem fx:id="RandomExponential" mnemonicParsing="false" onAction="#MenuItem_RandomExponential_ONCLICK" text="指数分布的随机数" />
+                                    <MenuItem fx:id="Buffon" mnemonicParsing="false" onAction="#MenuItem_Buffon_ONCLICK" text="buffon投针算法" />
+                                 </items>
+                              </Menu>
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="PrimePatterns" mnemonicParsing="false" onAction="#MenuItem_PrimePatterns_ONCLICK" text="素数模式" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <Menu mnemonicParsing="false" text="复数">
+                                 <items>
+                                    <MenuItem fx:id="Bifurcation" mnemonicParsing="false" onAction="#MenuItem_Bifurcation_ONCLICK" text="分支与实函数" />
+                                    <MenuItem fx:id="Julia" mnemonicParsing="false" onAction="#MenuItem_Julia_ONCLICK" text="Julia集与复变函数" />
+                                    <MenuItem fx:id="NewtonsFractal" mnemonicParsing="false" onAction="#MenuItem_NewtonsFractal_ONCLICK" text="复平面的牛顿算法" />
+                                    <MenuItem fx:id="Mandelbrot" mnemonicParsing="false" onAction="#MenuItem_Mandelbrot_ONCLICK" text="芒德布罗集" />
+                                 </items>
+                              </Menu>
+                           </items>
+                        </MenuButton>
+                     </children></FlowPane>
+                  <FlowPane GridPane.rowIndex="1">
+                     <children>
+                        <MenuButton mnemonicParsing="false" text="求方程的根">
+                           <items>
+                              <MenuItem fx:id="RegularFalsi" mnemonicParsing="false" onAction="#MenuItem_RegularFalsi_ONCLICK" text="试位算法-RegularFalsi" />
+                              <MenuItem fx:id="ImprovedRegularFalsi" mnemonicParsing="false" onAction="#MenuItem_ImprovedRegularFalsi_ONCLICK" text="改进的试位算法-ImprovedRegularFalsi" />
+                              <MenuItem fx:id="MenuItem_Secant_ONCLICK" mnemonicParsing="false" onAction="#MenuItem_Secant_ONCLICK" text="割线算法-Secant" />
+                              <MenuItem fx:id="Newtons" mnemonicParsing="false" onAction="#MenuItem_Newtons_ONCLICK" text="牛顿迭代法-Newtons" />
+                              <MenuItem fx:id="Bisection" mnemonicParsing="false" onAction="#MenuItem_Bisection_ONCLICK" text="对分算法-Bisection" />
+                              <MenuItem fx:id="Fixedpoint" mnemonicParsing="false" onAction="#MenuItem_Fixedpoint_ONCLICK" text="不动点迭代-FixedPoint" />
+                           </items>
+                        </MenuButton>
+                        <MenuButton mnemonicParsing="false" text="插值和逼近">
+                           <items>
+                              <MenuItem fx:id="Interpolation" mnemonicParsing="false" onAction="#MenuItem_Interpolation_ONCLICK" text="多项式插值-Interpolation" />
+                              <MenuItem fx:id="LinearRegression" mnemonicParsing="false" onAction="#MenuItem_LinearRegression_ONCLICK" text="线性逼近-LinearRegression" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </FlowPane>
+                  <TextArea prefHeight="200.0" prefWidth="200.0" text="求方程的根&#10;&#9;对分算法-Bisection&#10;&#9;试位算法-RegularFalsi&#10;&#9;改进的试位算法-ImprovedRegularFalsi&#10;&#9;割线算法-Secant&#10;&#9;牛顿迭代法-Newtons&#10;&#9;不动点迭代-FixedPoint&#10;插值和逼近&#10;&#9;多项式插值-Interpolation&#10;&#9;线性逼近-LinearRegression&#10;数值积分和数值微分&#10;&#9;梯形算法和辛普森公式&#10;&#9;欧拉算法，龙贝格算法&#10;矩阵&#10;&#9;图形转换矩阵&#10;&#9;LU分解测试线性系统方程&#10;计算的乐趣&#10;&#9;pi的计算&#10;&#9;均匀分布的随机数&#10;&#9;指数分布的随机数&#10;&#9;buffon投针算法&#10;&#9;素数模式&#10;&#9;分支与实函数&#10;&#9;Julia集与复变函数&#10;&#9;复平面的牛顿算法&#10;&#9;芒德布罗集&#10;&#9;float与double的交互" GridPane.rowIndex="3" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="122.0" minHeight="5.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="210.0" minHeight="1.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="302.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="440.0" minHeight="10.0" prefHeight="413.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
