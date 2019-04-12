@@ -1,9 +1,10 @@
 Calculator Numerical
 ====================
+
 三角函数使用弧度制单位。
-数值分析的算法来自于Ronald Mak所著《Java Number Cruncher》
+
 disigned by Anne Wu 2018.12.13
-BIT2017级“Java语言程序设计”结课设计-Wuqinxuan
+
 ---
 # 功能说明
 ### *程序实现了基本的四则运算计算器功能：*
